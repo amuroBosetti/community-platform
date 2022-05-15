@@ -4,8 +4,7 @@ import { Button } from 'oa-components'
 import type { AdminStore } from 'src/stores/Admin/admin.store'
 import type { IUser } from 'src/models/user.models'
 import { AuthWrapper } from 'src/components/Auth/AuthWrapper'
-import { Link } from 'react-router-dom'
-import { Text } from 'theme-ui'
+import { Text, Link } from 'theme-ui'
 
 /*
     Button to request a user's email from the firebase auth database and open in default mail client
@@ -45,7 +44,8 @@ export class UserAdmin extends React.Component<IProps, IState> {
         >
           Email
         </Button>
-        <Link to={({ pathname }) => `${pathname}/edit`}>
+        {/* LADEBUG */}
+        <Link href={`/edit`}>
           <Button data-cy="UserAdminEdit" ml={2}>
             Edit
           </Button>
