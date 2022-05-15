@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import theme from 'src/themes/styled.theme'
-import Flex from 'src/components/Flex'
+import { Card, Flex } from 'theme-ui'
 import { Box } from 'theme-ui'
 import { Icon } from 'oa-components'
 import { Field } from 'react-final-form'
@@ -38,16 +38,11 @@ export const HiddenInput = styled(Field)`
 `
 
 export const FlexSectionContainer = (props) => (
-  <Flex
-    card
-    mediumRadius
-    bg={'white'}
-    p={4}
-    mt={4}
-    sx={{ flexWrap: 'nowrap', flexDirection: 'column' }}
-  >
-    {props.children}
-  </Flex>
+  <Card mt={4}>
+    <Flex p={4} sx={{ flexWrap: 'nowrap', flexDirection: 'column' }}>
+      {props.children}
+    </Flex>
+  </Card>
 )
 
 export const ArrowIsSectionOpen = (props) => (

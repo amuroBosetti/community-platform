@@ -1,7 +1,7 @@
 import * as React from 'react'
 import L from 'leaflet'
 import { Image, Text } from 'theme-ui'
-import Flex from 'src/components/Flex'
+import { Flex } from 'theme-ui'
 import { Button } from 'oa-components'
 import type { Map } from 'react-leaflet'
 import { Popup as LeafletPopup } from 'react-leaflet'
